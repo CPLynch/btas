@@ -2,4 +2,6 @@ A big hurdle in fully understanding Javascript is that learning one part of the 
 
 Javascript is object based. A Javascript program is a bunch of objects communicating in order to fullfill the programmers desired outcome. What is an object? It is a collection of zero or more properties, a property being a single key to value pair, and a set of attributes that control how these properties can be used. Object properties can hold other objects as their values or can hold primitive types as their values, primitive types just mean non-object types of data (meaning they have no properties attached to them). There are seven of these non-object primitive types: Numbers, BigInt, Strings, Undefined, Null, Boolean, and Symbol. Javascript has many built in objects that have various duties some examples are: the global object, the function object, the Math object, the RegExp object, and the Json object, among others.
 
+Javascript objects can either have their own properties or they can also inherit properties. Inherited properties come from other objects linked from top to bottom with a prototype inheritance chain.
+
 The function object
