@@ -5,3 +5,5 @@ Javascript is object based. A Javascript program is a bunch of objects communica
 Javascript objects can either have their own properties or they can also inherit properties. Inherited properties come from other objects linked from top to bottom with a prototype inheritance chain.
 
 The function object
+
+The "this" keyword refers to the context object. It allows you to perfrom functions against a paticular object depinting on the context of the fucntion the "this" keyword is found in. This gets rid of the need to pass around objects to functions as you can use the this keyword instead, this can mean clearer more readable code - as long as reader can understand how which object the context object is. The context object, "this", will depend in what is executed how at runtime. Everytime a function is run a new execution context for that function is create
