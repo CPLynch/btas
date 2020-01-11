@@ -25,7 +25,9 @@ Each PendingJob Record has:
   A realm record - for initial excution context
   Script or module record for initial execution context
   
-A Job Queue is FIFO. There are two types of Job Queues: ScriptJobs (script and modules) and PromiseJobs (async). ECMAscript doesn't specify whether jobs in the scriptJob queue or PromiseJobs should be run first, only that each queue must run FIFO. The HTML spec actually clarifies how these queues should be ordered: when the execution stack is completed the next scriptJob should be picked up, at the end of that scriptJob any promise jobs created by that script job should be completed before before the next script job is started - effectively the promisejobs are attached to the end of a parent script job. If there are no script jobs run all the promiseJobs even if the promise jobs add a new script job. This works the same way in node.js.
+A Job Queue is FIFO. There are two types of Job Queues: ScriptJobs (script and modules, macrotasks) and PromiseJobs (async). ECMAscript doesn't specify whether jobs in the scriptJob queue or PromiseJobs should be run first, only that each queue must run FIFO. The HTML spec actually clarifies how these queues should be ordered: when the execution stack is completed the next scriptJob should be picked up, at the end of that scriptJob any promise jobs created by that script job should be completed before before the next script job is started - effectively the promisejobs are attached to the end of a parent script job. If there are no script jobs run all the promiseJobs even if the promise jobs add a new script job. This works the same way in node.js.
+
+Other terminology used for ScriptJobs is: Event Queue, Queue, Message Queue. Typically
 
 macrotasks: setTimeout, setInterval, setImmediate, requestAnimationFrame, I/O, UI rendering
 microtasks: process.nextTick, Promises, Object.observe, MutationObserver
