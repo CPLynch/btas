@@ -5,3 +5,4 @@ If a called from an object property (as a method) the "this" value is the object
   If the object property reference is passed to another identifier (either as a a declaration or as an argument) end then called then it will no longer have the this value of the original object.
   Also if the method is called from a nested object (obj1.obj2.run()) then the this value is the object has that property (in this case obj2)
   
+This can be bound explicitly useing call(), apply(), and bind() (bind - es5). bind() is hardbinding.
