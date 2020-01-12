@@ -10,3 +10,7 @@ The "this" keyword refers to the context object. It allows you to perfrom functi
 
 
 typeof() can be used to see the data type, execpt for null as null was intended originally to represent the lack of an object, therefore making typeof(identifier) where var identifier = null consistent when identifier is expecting an object.
+
+ECMAscript specifies normal and exotic objects. Normal objects are object with the standard internal slots and methods. Exoctic objects may override default implementations of internal methods.
+
+Error objects: typically, when the spec says an error should be thrown, it only specifies the type of error, not the error message. 
