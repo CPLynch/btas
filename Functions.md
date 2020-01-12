@@ -32,3 +32,6 @@ Other terminology used for ScriptJobs is: Event Queue, Queue, Message Queue. Typ
 
 macrotasks: setTimeout, setInterval, setImmediate, requestAnimationFrame, I/O, UI rendering
 microtasks: process.nextTick, Promises, Object.observe, MutationObserver
+
+What are constructor functions? Just normal functions with a new operetor immediatly before. That's it. The new operator makes normal functions into constructors. What are often reffered to as constructor functions are just normal functions designed to be used with the new operator.
+
