@@ -14,3 +14,9 @@ typeof() can be used to see the data type, execpt for null as null was intended 
 ECMAscript specifies normal and exotic objects. Normal objects are object with the standard internal slots and methods. Exoctic objects may override default implementations of internal methods.
 
 Error objects: typically, when the spec says an error should be thrown, it only specifies the type of error, not the error message. 
+
+
+Functions can become what are called constructor functions in Jasvascript. It is important for anyone coming from other languages to leave their pereption of how a contructor function should work at the door. A constuctor function in javascript is just a normal function modulated by the new operator. By convention a constructor function has a capital first letter (nothing to do with the language, but has become something JS developers have just collectivley decided to do to make it clear between themselves). The new operator creates a new object whos [[Prototype]] is set to the contsructurs .prototype property, the this value for the called function is set as that new object, if the constructor returns a non-null object then that object will be returned otherwise the new object i returned automatically.
+https://2ality.com/2014/01/new-operator.html
+
+Other ways to set the [[prototype]] value (also known as __proto__ - but this is vendor implemented and not spec compliant) is the Object.create() and Object.setPrototypeOf().
