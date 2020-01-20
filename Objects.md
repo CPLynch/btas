@@ -35,7 +35,7 @@ Internal slots are not inherited
 
 Javascript objects are made up of:
 1. A collection of properties, as well as a selection property attributes on each property that can be set as boolean values - either true or false.
-2. Internal Slots
+2. Internal Methods / Internal Slots
 
 
 There are two types of properties: "data properties" and "accessor properties"
