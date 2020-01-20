@@ -23,11 +23,25 @@ https://2ality.com/2014/01/new-operator.html
 
 Other ways to set the [[prototype]] value (also known as __proto__ - but this is vendor implemented and not spec compliant) is the Object.create() and Object.setPrototypeOf().
 
+Array indexes are between 0 and 2^32-2 (4294967294)
+
+Internal slots are not inherited
 
 --------------------------------------------
 
 # Ultimate guide to JS Objects video script
 
+(this video reflects the 2019 ECMAscript specification)
+
 Javascript objects are made up of:
-1. A collection of properties, 
-··*properties being the association of key - value pairs, each property has three associated attributes
+1. A collection of properties, as well as a selection property attributes on each property that can be set as boolean values - either true or false.
+2. Internal Slots
+
+
+There are two types of properties: "data properties" and "accessor properties"
+* a _data properties_ is the association of key - value pairs
+* an _accessor properties_ is the association of a key with up to two accessor functions; a getter and a setter
+For both, keys can either be string (even an empty string - "") or symbols.
+
+
+##Arrays
