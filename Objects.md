@@ -30,4 +30,4 @@ Other ways to set the [[prototype]] value (also known as __proto__ - but this is
 
 Javascript objects are made up of:
 1. A collection of properties, 
-+00B7+00B7*properties being the association of key - value pairs, each property has three associated attributes
+··*properties being the association of key - value pairs, each property has three associated attributes
