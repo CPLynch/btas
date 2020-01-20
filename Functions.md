@@ -1,6 +1,6 @@
 Constructors are functiono objects that create objects. The prototype property of a function object is a prototype object. A prototype object for property inheritance.
 
-A function or "function object" is just an object with the [[Call]] and maybe [[Constructor]] internal slots. For this reason they are also known as callable objects.
+A function or "function object" is just an object with the [[Call]] internal slot and sometimes a [[Constructor]] internal slot. For this reason they are also known as callable objects.
 
 An agent is at any moment in time always has one running Execution Context. It also has an associated Execution Context Stack, a set of named job queues. Agents (browser tabs, web workers, etc) can share an executing thread (ie some browsers share a single executing thread accross multiple unrelated tabs) as long as the CanBlock internal boolean is false. 
 
