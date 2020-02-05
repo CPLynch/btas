@@ -27,11 +27,15 @@ Array indexes are between 0 and 2^32-2 (4294967294)
 
 Internal slots are not inherited
 
+Super needs a home object
+
 --------------------------------------------
 
 # Ultimate guide to JS Objects video script
 
 (this video reflects the 2019 ECMAscript specification)
+
+> Object description - object structure, property types, property attributes
 
 Javascript objects are made up of:
 1. A collection of properties, as well as a selection property attributes on each property that can be set as boolean values - either true or false.
@@ -42,6 +46,15 @@ There are two types of properties: "data properties" and "accessor properties"
 * a _data properties_ is the association of key - value pairs
 * an _accessor properties_ is the association of a key with up to two accessor functions; a getter and a setter
 For both, keys can either be string (even an empty string - "") or symbols.
+
+Accessor properties 
+Enumarable will default to true, as will the configurable attribute. 
+
+To delete a property: delete obj.prop; delete obj["prop"]. The return value for this opertation is true unless the property's configurable attribute has been set to false, in which case the operation will return false.
+
+
+Every object has a [[Prototype]] internal slot, this slot holds a reference to an Object or null value. When an attempt to access a property on an object is made the js engine of course attempts to find the key on that object, if it fails to find it the engine will move to the object in the [[Prototype]] reference and try to find a the key there and if so use that value. This makes a chain commonly called the prototype inheritance chain. You can set the prototype with Object.create and Object.setPrototypeOf, as well as obj.__proto__ (although __proto__ is not recommended). It can also be set with the help of the "new" operator and a function. A function used with the new operator is called a constructor function although there is nothing special about it from other functions it is just a normal function (by convention an uppercase first character is used to denote a function designed to be used with the new keyword - a constructor). Every function has a .prototype property. When new func() is called the a new object is created with its [[Prototype]] reference pointing to the functions .prototype key object reference. This object has a constructor property on it that points back to the constructor. This constuctor property is writable and configurable though so could be changed accidentaly or on purpose by other parts of the code base.
+
 
 
 ##Arrays
