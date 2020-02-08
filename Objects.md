@@ -29,16 +29,37 @@ Internal slots are not inherited
 
 Super needs a home object
 
+globalThis (EcmaScript2020) refers to the global environment across environment (like window in browsers and global in node.js)
+
 --------------------------------------------
 
 # Ultimate guide to JS Objects video script
 
 (this video reflects the 2019 ECMAscript specification)
 
+Ok so a common trope you hear in the Javascript world is that every thing is an Object... Is that right?
+No!!
+
+There are 8 types in JavaScript 
+7 primitives:
+*Boolean
+*Null
+*Undefined
+*Number
+*String
+*Symbol
+*BigInt (to be added to JS in ECMAscript2020)
+and 
+*Object
+
+Primitives in the ECMAscript spec literally just means not an object! And an object is defined as a collection of properties...
+
+Sometimes 
+
 > Object description - object structure, property types, property attributes
 
 Javascript objects are made up of:
-1. A collection of properties, as well as a selection property attributes on each property that can be set as boolean values - either true or false.
+1. A collection of properties, as well as a selection of property attributes for each respective property that can be set as boolean values - either true or false.
 2. Internal Methods / Internal Slots
 
 
